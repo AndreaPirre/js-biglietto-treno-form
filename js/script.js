@@ -13,12 +13,12 @@ creaBtn.addEventListener("click", function () {
     var minNumeroTreno = 90000;
     var maxNumeroTreno =100000;
 
-    if (categoria == "minorenne") {
-        var costoBiglietto = km * prezzoKm - 20/100 * (km * prezzoKm).toFixed(2) + " euro" + " (hai meno di 18 anni, è già stato applicato uno sconto del 20%)"  ;
-    }else if (categoria == "over65") {
-        var costoBiglietto = km * prezzoKm - 40/100 * (km * prezzoKm).toFixed(2) + " euro" + " (hai più di 65 anni, è già stato applicato uno sconto del 40%)";
+    if (categoria == "Minorenne") {
+        var costoBiglietto = (km * prezzoKm - 20/100 * (km * prezzoKm)).toFixed(2) + " euro" + " (hai meno di 18 anni, applicato uno sconto del 20%)"  ;
+    }else if (categoria == "Over 65") {
+        var costoBiglietto = (km * prezzoKm - 40/100 * (km * prezzoKm)).toFixed(2) + " euro" + " (hai più di 65 anni, applicato uno sconto del 40%)";
     }else {
-        var costoBiglietto = km * prezzoKm.toFixed(2) + " euro" + " (è stata applicata la tariffa base)";
+        var costoBiglietto = (km * prezzoKm).toFixed(2) + " euro" + " (è stata applicata la tariffa base)";
     }
 
     var numeroTreno = Math.floor(Math.random()*(maxNumeroTreno - minNumeroTreno + 1)) + minNumeroTreno;
@@ -39,5 +39,5 @@ annullaBtn.addEventListener("click", function () {
     document.getElementById('biglietto').className = "hidden";
     document.getElementById('nome').value = "";
     document.getElementById('km').value = "carrozza";
-    document.getElementById('categoria').innerHTML = "Maggiorenne";
+    // document.getElementById('categoria').innerHTML = "Maggiorenne";
 })

@@ -6,34 +6,36 @@
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
+        <div class="nav_top">
+            <img src="img/italo.png" alt="">
+            <div class="form">
+                <div>
+                    <label for="nome">Nome</label>
+                    <input id="nome" type="text" name="nome" value="" placeholder="Come ti chiami?">
+                </div>
 
-        <div>
-            <div>
-                <label for="nome">Nome</label>
-                <input id="nome" type="text" name="nome" value="">
+                <div>
+                    <label for="km">Km che si vogliono percorrere</label>
+                    <input id="km" type="number" name="km" value="" placeholder="Quanti km vorresti percorrere?">
+                </div>
+                <div>
+                    <label for="Categoria">Categoria</label>
+                    <select id="categoria" name="categoria">
+
+                        <option value="Over 65">Over 65</option>
+                        <option value="" selected>Maggiorenne</option>
+                        <option value="Minorenne">Minorenne</option>
+
+                    </select>
+
+                </div>
+
+                <button id="creaBiglietto"  type="button" name="creaBiglietto">Crea</button>
+                <button id="annullaBiglietto"  type="button" name="annullaBiglietto">Annulla</button>
             </div>
-
-            <div>
-                <label for="km">Km che si vogliono percorrere</label>
-                <input id="km" type="number" name="km" value="">
-            </div>
-            <div>
-                <label for="Categoria">Categoria</label>
-                <select id="categoria" name="categoria">
-
-                    <option value="over65">Over 65</option>
-                    <option value="" selected>Maggiorenne</option>
-                    <option value="minorenne">Minorenne</option>
-
-                </select>
-
-            </div>
-
-            <button id="creaBiglietto" type="button" name="creaBiglietto">Crea</button>
-            <button id="annullaBiglietto" type="button" name="annullaBiglietto">Annulla</button>
         </div>
         <div>
-            <table>
+            <table id="biglietto">
                 <thead>
                     <tr>
                         <th>Passeggero</th>
